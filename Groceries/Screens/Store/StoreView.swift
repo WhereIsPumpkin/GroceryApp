@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StoreView: View {
+    
+    var productList: [GroceryItem]
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -15,7 +18,6 @@ struct StoreView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            let bottomSafeArea = geometry.safeAreaInsets.bottom
             
             VStack {
                 HStack {
@@ -28,24 +30,23 @@ struct StoreView: View {
                     Spacer()
                 }
                 
-                ScrollView(showsIndicators: false) {
+                ScrollView() {
                     LazyVGrid(columns: columns, spacing: 15) {
-                        ForEach(GroceryStore.groceryList) { item in
-                            ProductCardView(groceryItem: .constant(item))
+                        ForEach(productList) { item in
+                            ProductCardView(groceryItem: item)
                                 .padding(.bottom, 15)
                         }
                     }
                 }
-
-                
+                .scrollIndicators(ScrollIndicatorVisibility.never)
             }
-            .padding(.bottom, 90 - bottomSafeArea)
+            .padding(.bottom, 90 - geometry.safeAreaInsets.bottom)
             .padding(.horizontal, 24)
         }
     }
 }
 
 #Preview {
-    StoreView()
+    StoreView(productList: GroceryStore().groceryList)
 }
 

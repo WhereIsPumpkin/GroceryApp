@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct MainTabContainerView: View {
+    
     @State private var tabSelected: Tab = .storefront
+    
+    @Environment(GroceryStore.self) private var groceryStore
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -22,9 +25,9 @@ struct MainTabContainerView: View {
                         VStack {
                             switch tab {
                             case .storefront:
-                                StoreView()
+                                StoreView(productList: groceryStore.groceryList)
                             case .cart:
-                                CartView()
+                                CartView(productList: groceryStore.groceryList)
                             case .setup:
                                 SetupView()
                             }
@@ -42,7 +45,3 @@ struct MainTabContainerView: View {
     }
 }
 
-
-#Preview {
-    MainTabContainerView()
-}

@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-typealias groceryItem = GroceryStore.GroceryItem
 
 struct ProductCardView: View {
     
-    @Binding var groceryItem: groceryItem
+    @Bindable var groceryItem: GroceryItem
     
     var body: some View {
         VStack {
@@ -49,16 +48,17 @@ struct ProductCardView: View {
                     Spacer()
                 }
                 
-                
                 if groceryItem.quantity > 0 {
                     AdjustButton(minusAction: {
-                        print("- quantity")
+                        groceryItem.quantity -= 1
                     }, plusAction: {
-                        print("+ quantity")
-                    }, quantityPlaceholder: 1)
+                        groceryItem.quantity += 1
+                    }, quantityPlaceholder: groceryItem.quantity, 
+                       buttonSize: 44,
+                       buttonFontSize: 18)
                 } else {
                     AddButton(action: {
-                        print("added")
+                        groceryItem.quantity += 1
                     })
                 }
             }
@@ -77,6 +77,6 @@ struct ProductCardView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    ProductCardView(groceryItem: .constant(GroceryStore.groceryList[0]))
+    ProductCardView(groceryItem: GroceryStore().groceryList[0])
         .padding()
 }
