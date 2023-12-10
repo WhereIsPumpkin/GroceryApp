@@ -25,9 +25,9 @@ struct MainTabContainerView: View {
                         VStack {
                             switch tab {
                             case .storefront:
-                                StoreView(productList: groceryStore.groceryList)
+                                StoreView(viewModel: StoreViewModel(productList: groceryStore.groceryList))
                             case .cart:
-                                CartView(productList: groceryStore.groceryList)
+                                CartView(viewModel: CartViewModel(productList: groceryStore.groceryList))
                             case .setup:
                                 SetupView(viewModel: SetupViewModel(productList: groceryStore.groceryList))
                             }

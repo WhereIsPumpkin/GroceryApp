@@ -24,6 +24,7 @@
 		753647562B265BB1000EF052 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647552B265BB1000EF052 /* SetupViewModel.swift */; };
 		7536475A2B265D59000EF052 /* SaleModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647592B265D59000EF052 /* SaleModalView.swift */; };
 		753647602B2665E9000EF052 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536475F2B2665E9000EF052 /* CustomButtonView.swift */; };
+		753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647632B2670AE000EF052 /* StoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		753647552B265BB1000EF052 /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetupViewModel.swift; path = ../../../../../Documents/SetupViewModel.swift; sourceTree = "<group>"; };
 		753647592B265D59000EF052 /* SaleModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleModalView.swift; sourceTree = "<group>"; };
 		7536475F2B2665E9000EF052 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		753647632B2670AE000EF052 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				7501A4492B2516F4000C4F7A /* StoreView.swift */,
 				7501A4512B251E86000C4F7A /* ProductCardView.swift */,
+				753647632B2670AE000EF052 /* StoreViewModel.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				753647562B265BB1000EF052 /* SetupViewModel.swift in Sources */,
 				7501A4442B250ED6000C4F7A /* CustomTabBar.swift in Sources */,
 				7501A4592B25C49B000C4F7A /* AddButton.swift in Sources */,
+				753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */,
 				7536475A2B265D59000EF052 /* SaleModalView.swift in Sources */,
 				7501A44A2B2516F4000C4F7A /* StoreView.swift in Sources */,
 				7501A44E2B251712000C4F7A /* SetupView.swift in Sources */,

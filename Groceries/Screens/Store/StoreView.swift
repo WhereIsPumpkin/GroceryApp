@@ -9,17 +9,15 @@ import SwiftUI
 
 struct StoreView: View {
     
-    var productList: [GroceryItem]
+    // MARK: - Properties
+    @ObservedObject var viewModel: StoreViewModel
     
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
+    // MARK: - Body
     var body: some View {
         GeometryReader { geometry in
             
             VStack {
+                // MARK: Header Section
                 HStack {
                     Spacer()
                     Text("Find Products")
@@ -30,10 +28,11 @@ struct StoreView: View {
                     Spacer()
                 }
                 
+                // MARK: Product List Section
                 ScrollView() {
-                    LazyVGrid(columns: columns, spacing: 15) {
-                        ForEach(productList) { item in
-                            ProductCardView(groceryItem: item)
+                    LazyVGrid(columns: viewModel.columns, spacing: 15) {
+                        ForEach(viewModel.productList) { item in
+                            ProductCardView(groceryItem: item, viewModel: StoreViewModel(productList: viewModel.productList))
                                 .padding(.bottom, 15)
                         }
                     }
@@ -46,7 +45,8 @@ struct StoreView: View {
     }
 }
 
+// MARK: - Preview
 #Preview {
-    StoreView(productList: GroceryStore().groceryList)
+    StoreView(viewModel: StoreViewModel(productList: GroceryStore().groceryList))
 }
 

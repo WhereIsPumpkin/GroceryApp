@@ -11,6 +11,7 @@ import SwiftUI
 struct ProductCardView: View {
     
     @Bindable var groceryItem: GroceryItem
+    @ObservedObject var viewModel: StoreViewModel
     
     var body: some View {
         VStack {
@@ -50,12 +51,12 @@ struct ProductCardView: View {
                 
                 if groceryItem.quantity > 0 {
                     AdjustButton(minusAction: {
-                        groceryItem.quantity -= 1
+                        viewModel.decrementQuantity(groceryItem: groceryItem)
                     }, plusAction: {
-                        groceryItem.quantity += 1
-                    }, quantityPlaceholder: groceryItem.quantity, 
-                       buttonSize: 44,
-                       buttonFontSize: 18)
+                        viewModel.addQuantity(groceryItem: groceryItem)
+                    }, quantityPlaceholder: groceryItem.quantity,
+                                 buttonSize: 44,
+                                 buttonFontSize: 18)
                 } else {
                     AddButton(action: {
                         groceryItem.quantity += 1
@@ -77,6 +78,6 @@ struct ProductCardView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    ProductCardView(groceryItem: GroceryStore().groceryList[0])
+    ProductCardView(groceryItem: GroceryStore().groceryList[0], viewModel: StoreViewModel(productList: GroceryStore().groceryList))
         .padding()
 }
