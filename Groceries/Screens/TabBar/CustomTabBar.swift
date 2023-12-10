@@ -40,7 +40,7 @@ struct CustomTabBar: View {
                     Spacer()
                     VStack(spacing: 3) {
                         Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
-                            .foregroundColor(tab == selectedTab ? Color(red: 0.33, green: 0.69, blue: 0.46) : Color(red: 0.01, green: 0.01, blue: 0.01))
+                            .foregroundColor(tab == selectedTab ? Color("mainGreen") : Color(red: 0.01, green: 0.01, blue: 0.01))
                             .font(.system(size: 24))
                             .onTapGesture {
                                 selectedTab = tab
@@ -49,7 +49,7 @@ struct CustomTabBar: View {
                         Text(tab.tabName)
                             .font(.system(size: 12, weight: .semibold))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(tab == selectedTab ? Color(red: 0.33, green: 0.69, blue: 0.46) : Color(red: 0.01, green: 0.01, blue: 0.01))
+                            .foregroundColor(tab == selectedTab ? Color("mainGreen") : Color(red: 0.01, green: 0.01, blue: 0.01))
                     }
                     Spacer()
                 }

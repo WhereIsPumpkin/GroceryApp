@@ -9,13 +9,15 @@ import SwiftUI
 
 struct AddButton: View {
     
+    // MARK: - Properties
     var action: () -> Void
     
+    // MARK: - Body
     var body: some View {
         Button(action: action, label: {
             Image(systemName: "plus")
                 .frame(width: 44, height: 44)
-                .background(Color(red: 0.33, green: 0.69, blue: 0.46))
+                .background(Color("mainGreen"))
                 .foregroundStyle(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
         })

@@ -12,7 +12,7 @@ class GroceryItem: Identifiable {
     let id: UUID
     let name: String
     let amount: String
-    let price: Double
+    var price: Double
     var quantity: Int
     var totalItemPrice: Double {
         price * Double(quantity)

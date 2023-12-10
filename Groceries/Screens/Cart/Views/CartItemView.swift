@@ -27,7 +27,6 @@ struct CartItemView: View {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(groceryItem.name)
                         .font(.system(size: 16, weight: .bold))
-                        .kerning(0.1)
                         .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
                     
                     Text("\(groceryItem.amount), Price")
@@ -64,7 +63,6 @@ struct CartItemView: View {
                         
                         Text("$\(String(format: "%.2f", totalItemPrice))")
                             .font(.system(size: 18, weight: .semibold))
-                            .kerning(0.1)
                             .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
                     }
                     .frame(width: 100)

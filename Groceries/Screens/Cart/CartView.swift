@@ -52,7 +52,7 @@ struct CartView: View {
                             }
                             .foregroundColor(.clear)
                             .frame(height: 67)
-                            .background(Color(red: 0.33, green: 0.69, blue: 0.46))
+                            .background(Color("mainGreen"))
                             .cornerRadius(19)
                         }
                             

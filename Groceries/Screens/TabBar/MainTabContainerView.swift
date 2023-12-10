@@ -29,7 +29,7 @@ struct MainTabContainerView: View {
                             case .cart:
                                 CartView(productList: groceryStore.groceryList)
                             case .setup:
-                                SetupView()
+                                SetupView(viewModel: SetupViewModel(productList: groceryStore.groceryList))
                             }
                         }
                         .tag(tab)
