@@ -26,7 +26,7 @@ struct SetupView: View {
                 
                 CustomButtonView(action: {
                     viewModel.removeAllProducts()
-                }, buttonText: "Delete Product", backgroundColor: Color(red: 0.70, green: 0.32, blue: 0.45))
+                }, buttonText: "Delete All Product", backgroundColor: Color(red: 0.70, green: 0.32, blue: 0.45))
             }
             .padding(.horizontal, 25)
             .padding(.bottom, 90 - geometry.safeAreaInsets.bottom)

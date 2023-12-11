@@ -29,21 +29,34 @@ struct StoreView: View {
                 }
                 
                 // MARK: Product List Section
-                ScrollView() {
-                    LazyVGrid(columns: viewModel.columns, spacing: 15) {
-                        ForEach(viewModel.groceryData.productList) { item in
-                            ProductCardView(groceryItem: item, viewModel: viewModel)
-                                .padding(.bottom, 15)
+                if viewModel.groceryData.productList.isEmpty {
+                    VStack(spacing: 50) {
+                        Spacer()
+                        Image("products-empty")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        
+                        CustomTextView(title: "There Is No Any Product :(", fontSize: 20, fontWeight: .bold, fontColor: Color("mainGreen"))
+                        Spacer()
+                    }
+                } else {
+                    ScrollView() {
+                        LazyVGrid(columns: viewModel.columns, spacing: 15) {
+                            ForEach(viewModel.groceryData.productList) { item in
+                                ProductCardView(groceryItem: item, viewModel: viewModel)
+                                    .padding(.bottom, 15)
+                            }
                         }
                     }
+                    .scrollIndicators(ScrollIndicatorVisibility.never)
                 }
-                .scrollIndicators(ScrollIndicatorVisibility.never)
             }
             .padding(.bottom, 90 - geometry.safeAreaInsets.bottom)
             .padding(.horizontal, 24)
         }
     }
 }
+
 
 // MARK: - Preview
 #Preview {

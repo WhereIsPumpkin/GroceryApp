@@ -51,7 +51,7 @@ struct ProductCardView: View {
                                  buttonFontSize: 18)
                 } else {
                     AddButton(action: {
-                        groceryItem.quantity += 1
+                        viewModel.addQuantity(groceryItem: groceryItem)
                     })
                 }
             }
