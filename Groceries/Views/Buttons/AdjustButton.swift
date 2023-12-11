@@ -35,7 +35,7 @@ struct AdjustButton: View {
             
             Text("\(quantityPlaceholder)")
                 .font(.system(size: buttonFontSize, weight: .semibold))
-                .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                .foregroundColor(Color("textColor"))
             
             Spacer()
             

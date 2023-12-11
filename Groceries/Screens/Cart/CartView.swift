@@ -18,12 +18,8 @@ struct CartView: View {
             
             VStack(spacing: 32) {
                 // MARK: Cart Items Section
-                
                 if viewModel.filteredProductList.count > 0 {
-                    Text("My Cart")
-                        .font(.system(size: 20, weight: .bold))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                    CustomTextView(title: "My Cart", fontSize: 20, fontWeight: .bold, fontColor: Color("textColor"))
                     
                     VStack {
                         Divider()
@@ -41,9 +37,7 @@ struct CartView: View {
                             HStack{
                                 Spacer()
                                 
-                                Text("Total Price: $ \(String(format: "%.2f",viewModel.totalPrice))")
-                                    .foregroundStyle(.white)
-                                    .font(.system(size: 18, weight: .semibold))
+                                CustomTextView(title: "Total Price: $ \(String(format: "%.2f", viewModel.totalPrice))", fontSize: 18, fontWeight: .semibold, fontColor: Color.white)
                                 
                                 Spacer()
                             }
@@ -62,14 +56,13 @@ struct CartView: View {
                     
                     HStack(){
                         Spacer()
+                        
                         Image("cart-empty")
+                        
                         Spacer()
                     }
                     
-                    Text("Your Cart is Empty")
-                        .font(.system(size: 25, weight: .bold))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                    CustomTextView(title: "Your Cart is Empty", fontSize: 25, fontWeight: .bold, fontColor: Color("textColor"))
                     
                     Spacer()
                 }

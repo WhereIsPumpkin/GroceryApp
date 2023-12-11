@@ -20,6 +20,7 @@
 		7501A4592B25C49B000C4F7A /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7501A4582B25C49B000C4F7A /* AddButton.swift */; };
 		7501A45B2B25C4C5000C4F7A /* AdjustButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7501A45A2B25C4C5000C4F7A /* AdjustButton.swift */; };
 		7501A45E2B25DACE000C4F7A /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7501A45D2B25DACE000C4F7A /* CartItemView.swift */; };
+		7504C0292B26FFB900977F8B /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504C0282B26FFB900977F8B /* CustomTextView.swift */; };
 		753647542B262A2D000EF052 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647532B262A2D000EF052 /* CartViewModel.swift */; };
 		753647562B265BB1000EF052 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647552B265BB1000EF052 /* SetupViewModel.swift */; };
 		7536475A2B265D59000EF052 /* SaleModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647592B265D59000EF052 /* SaleModalView.swift */; };
@@ -42,6 +43,7 @@
 		7501A4582B25C49B000C4F7A /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		7501A45A2B25C4C5000C4F7A /* AdjustButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustButton.swift; sourceTree = "<group>"; };
 		7501A45D2B25DACE000C4F7A /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
+		7504C0282B26FFB900977F8B /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		753647532B262A2D000EF052 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		753647552B265BB1000EF052 /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetupViewModel.swift; path = ../../../../../Documents/SetupViewModel.swift; sourceTree = "<group>"; };
 		753647592B265D59000EF052 /* SaleModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleModalView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		7501A4502B251947000C4F7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7504C0272B26FFA400977F8B /* Texts */,
 				7501A45C2B25C7A1000C4F7A /* Buttons */,
 			);
 			path = Views;
@@ -171,6 +174,14 @@
 				7536475F2B2665E9000EF052 /* CustomButtonView.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7504C0272B26FFA400977F8B /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				7504C0282B26FFB900977F8B /* CustomTextView.swift */,
+			);
+			path = Texts;
 			sourceTree = "<group>";
 		};
 		7536475B2B265E95000EF052 /* Views */ = {
@@ -268,6 +279,7 @@
 				7501A4442B250ED6000C4F7A /* CustomTabBar.swift in Sources */,
 				7501A4592B25C49B000C4F7A /* AddButton.swift in Sources */,
 				753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */,
+				7504C0292B26FFB900977F8B /* CustomTextView.swift in Sources */,
 				7536475A2B265D59000EF052 /* SaleModalView.swift in Sources */,
 				7501A44A2B2516F4000C4F7A /* StoreView.swift in Sources */,
 				7501A44E2B251712000C4F7A /* SetupView.swift in Sources */,

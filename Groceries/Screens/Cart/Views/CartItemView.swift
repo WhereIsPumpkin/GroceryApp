@@ -25,13 +25,9 @@ struct CartItemView: View {
                 Spacer(minLength: 22)
                 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(groceryItem.name)
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                    CustomTextView(title: groceryItem.name, fontSize: 16, fontWeight: .bold, fontColor: Color("textColor"))
                     
-                    Text("\(groceryItem.amount), Price")
-                        .font(.system(size: 14))
-                        .foregroundColor(Color(red: 0.49, green: 0.49, blue: 0.49))
+                    CustomTextView(title: "\(groceryItem.amount), Price", fontSize: 14, fontWeight: .regular, fontColor: Color(red: 0.49, green: 0.49, blue: 0.49))
                     
                     Spacer(minLength: 8)
                     
@@ -61,19 +57,15 @@ struct CartItemView: View {
                     HStack {
                         Spacer()
                         
-                        Text("$\(String(format: "%.2f", totalItemPrice))")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                        CustomTextView(title: "$\(String(format: "%.2f", totalItemPrice))", fontSize: 18, fontWeight: .semibold, fontColor: Color("textColor"))
+                        
                     }
                     .frame(width: 100)
-                    
-                    
                 }
             }
             .padding(.vertical, 30)
             
             Divider()
-            
         }
         .frame(height: 155)
     }

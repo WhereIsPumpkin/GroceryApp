@@ -20,11 +20,11 @@ struct StoreView: View {
                 // MARK: Header Section
                 HStack {
                     Spacer()
-                    Text("Find Products")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                    
+                    CustomTextView(title: "Find Products", fontSize: 20, fontWeight: .bold, fontColor: Color("textColor"))
                     
                     Image("carrot")
+                    
                     Spacer()
                 }
                 

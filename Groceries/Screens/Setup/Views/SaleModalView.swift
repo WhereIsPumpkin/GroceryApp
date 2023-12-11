@@ -17,15 +17,11 @@ struct SaleModalView: View {
     // MARK: - Body
     var body: some View {
         VStack(spacing: 40) {
-            Text("Set Sale Amount")
-                .font(.system(size: 30, weight: .semibold))
-                .foregroundStyle(Color("mainGreen"))
+            CustomTextView(title: "Set Sale Amount", fontSize: 30, fontWeight: .semibold, fontColor: Color("mainGreen"))
             
             Slider(value: $percentage, in: 0...100, step: 1)
             
-            Text("\(Int(percentage))%")
-                .font(.system(size: 25, weight: .bold))
-                .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+            CustomTextView(title: "\(Int(percentage))%", fontSize: 25, fontWeight: .bold, fontColor: Color("textColor"))
             
             Button(action: {
                 viewModel.adjustPrices(by: percentage)

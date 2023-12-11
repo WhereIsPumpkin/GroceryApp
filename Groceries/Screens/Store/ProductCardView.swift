@@ -25,14 +25,9 @@ struct ProductCardView: View {
             
             HStack {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text(groceryItem.name)
-                        .font(.system(size: 16, weight: .bold))
-                        .kerning(0.1)
-                        .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                    CustomTextView(title: groceryItem.name, fontSize: 16, fontWeight: .bold, fontColor: Color("textColor"))
                     
-                    Text("\(groceryItem.amount), Price")
-                        .font(.system(size: 14))
-                        .foregroundColor(Color(red: 0.49, green: 0.49, blue: 0.49))
+                    CustomTextView(title: "\(groceryItem.amount), Price", fontSize: 14, fontWeight: .regular, fontColor: Color(red: 0.49, green: 0.49, blue: 0.49))
                 }
                 Spacer()
             }
@@ -41,10 +36,7 @@ struct ProductCardView: View {
             
             HStack {
                 if groceryItem.quantity < 1 {
-                    Text("$\(String(format: "%.2f", groceryItem.price))")
-                        .font(.system(size: 18, weight: .semibold))
-                        .kerning(0.1)
-                        .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                    CustomTextView(title: "$\(String(format: "%.2f", groceryItem.price))", fontSize: 18, fontWeight: .semibold, fontColor: Color("textColor"))
                     
                     Spacer()
                 }

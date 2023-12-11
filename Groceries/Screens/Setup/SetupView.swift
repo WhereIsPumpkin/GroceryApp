@@ -18,14 +18,12 @@ struct SetupView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text("Setup")
-                    .font(.system(size: 20, weight: .bold))
-                    .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.15))
+                CustomTextView(title: "Setup", fontSize: 20, fontWeight: .bold, fontColor: Color("textColor"))
                 
                 CustomButtonView(action: {
                     showSaleModal = true
                 }, buttonText: "Set Sale", backgroundColor: Color(red: 0.33, green: 0.69, blue: 0.46))
-
+                
                 CustomButtonView(action: {
                     // in development
                 }, buttonText: "Delete Product", backgroundColor: Color(red: 0.70, green: 0.32, blue: 0.45))
