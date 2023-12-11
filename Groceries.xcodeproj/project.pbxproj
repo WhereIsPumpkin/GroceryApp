@@ -22,10 +22,10 @@
 		7501A45E2B25DACE000C4F7A /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7501A45D2B25DACE000C4F7A /* CartItemView.swift */; };
 		7504C0292B26FFB900977F8B /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504C0282B26FFB900977F8B /* CustomTextView.swift */; };
 		753647542B262A2D000EF052 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647532B262A2D000EF052 /* CartViewModel.swift */; };
-		753647562B265BB1000EF052 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647552B265BB1000EF052 /* SetupViewModel.swift */; };
 		7536475A2B265D59000EF052 /* SaleModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647592B265D59000EF052 /* SaleModalView.swift */; };
 		753647602B2665E9000EF052 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536475F2B2665E9000EF052 /* CustomButtonView.swift */; };
 		753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647632B2670AE000EF052 /* StoreViewModel.swift */; };
+		7572A26B2B271B0A0025B829 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A26A2B271B0A0025B829 /* SetupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +45,10 @@
 		7501A45D2B25DACE000C4F7A /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
 		7504C0282B26FFB900977F8B /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		753647532B262A2D000EF052 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
-		753647552B265BB1000EF052 /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetupViewModel.swift; path = ../../../../../Documents/SetupViewModel.swift; sourceTree = "<group>"; };
 		753647592B265D59000EF052 /* SaleModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleModalView.swift; sourceTree = "<group>"; };
 		7536475F2B2665E9000EF052 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		753647632B2670AE000EF052 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		7572A26A2B271B0A0025B829 /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 			children = (
 				7536475B2B265E95000EF052 /* Views */,
 				7501A44D2B251712000C4F7A /* SetupView.swift */,
-				753647552B265BB1000EF052 /* SetupViewModel.swift */,
+				7572A26A2B271B0A0025B829 /* SetupViewModel.swift */,
 			);
 			path = Setup;
 			sourceTree = "<group>";
@@ -275,7 +275,6 @@
 				7501A45B2B25C4C5000C4F7A /* AdjustButton.swift in Sources */,
 				7501A44C2B251702000C4F7A /* CartView.swift in Sources */,
 				7501A4382B250B0D000C4F7A /* MainTabContainerView.swift in Sources */,
-				753647562B265BB1000EF052 /* SetupViewModel.swift in Sources */,
 				7501A4442B250ED6000C4F7A /* CustomTabBar.swift in Sources */,
 				7501A4592B25C49B000C4F7A /* AddButton.swift in Sources */,
 				753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */,
@@ -285,6 +284,7 @@
 				7501A44E2B251712000C4F7A /* SetupView.swift in Sources */,
 				7501A4552B25B676000C4F7A /* GroceryModel.swift in Sources */,
 				7501A45E2B25DACE000C4F7A /* CartItemView.swift in Sources */,
+				7572A26B2B271B0A0025B829 /* SetupViewModel.swift in Sources */,
 				7501A4362B250B0D000C4F7A /* GroceriesApp.swift in Sources */,
 				7501A4522B251E86000C4F7A /* ProductCardView.swift in Sources */,
 			);
