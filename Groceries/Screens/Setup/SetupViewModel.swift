@@ -9,12 +9,18 @@ import SwiftUI
 
 class SetupViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var originalPrices: [Int: Double] = [:]
     @ObservedObject var groceryData: SharedGroceryData
+    
+    // MARK: - Initialization
     
     init(groceryData: SharedGroceryData) {
         self.groceryData = groceryData
     }
+    
+    // MARK: - Public Methods
     
     func adjustPrices(by percentage: Double) {
         for index in groceryData.productList.indices {
@@ -31,6 +37,3 @@ class SetupViewModel: ObservableObject {
         groceryData.productList.removeAll()
     }
 }
-
-
-
