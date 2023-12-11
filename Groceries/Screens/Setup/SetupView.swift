@@ -25,7 +25,7 @@ struct SetupView: View {
                 }, buttonText: "Set Sale", backgroundColor: Color(red: 0.33, green: 0.69, blue: 0.46))
                 
                 CustomButtonView(action: {
-                    // in development
+                    viewModel.removeAllProducts()
                 }, buttonText: "Delete Product", backgroundColor: Color(red: 0.70, green: 0.32, blue: 0.45))
             }
             .padding(.horizontal, 25)
@@ -39,5 +39,5 @@ struct SetupView: View {
 
 // MARK: - Preview
 #Preview {
-    SetupView(viewModel: SetupViewModel(productList: GroceryStore().groceryList))
+    SetupView(viewModel: SetupViewModel(groceryData: SharedGroceryData(productList: GroceryStore.shared.groceryList)))
 }

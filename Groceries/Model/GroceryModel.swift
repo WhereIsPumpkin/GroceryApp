@@ -31,7 +31,9 @@ class GroceryItem: Identifiable {
 
 @Observable
 class GroceryStore {
-    var groceryList: [GroceryItem] = [
+    static var shared = GroceryStore()
+    
+    let groceryList: [GroceryItem] = [
         GroceryItem(name: "Diet Coke", amount: "325ml", price: 1.99, quantity: 0, image: "dietCoke"),
         GroceryItem(name: "Red Apple", amount: "1kg", price: 4.99, quantity: 0, image: "apple"),
         GroceryItem(name: "Apple Juice", amount: "2L", price: 15.99, quantity: 0, image: "appleJuice"),

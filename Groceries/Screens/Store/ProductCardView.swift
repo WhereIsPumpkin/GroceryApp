@@ -70,6 +70,6 @@ struct ProductCardView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    ProductCardView(groceryItem: GroceryStore().groceryList[0], viewModel: StoreViewModel(productList: GroceryStore().groceryList))
+    ProductCardView(groceryItem: GroceryStore.shared.groceryList[0], viewModel: StoreViewModel(groceryData: SharedGroceryData(productList: GroceryStore.shared.groceryList)))
         .padding()
 }

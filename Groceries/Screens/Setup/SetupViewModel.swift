@@ -8,26 +8,27 @@
 import SwiftUI
 
 class SetupViewModel: ObservableObject {
-    @Published var originalPrices: [Int: Double] = [:]
-    var productList: [GroceryItem] = []
     
-    init(productList: [GroceryItem]) {
-        self.productList = productList
+    @Published var originalPrices: [Int: Double] = [:]
+    @ObservedObject var groceryData: SharedGroceryData
+    
+    init(groceryData: SharedGroceryData) {
+        self.groceryData = groceryData
     }
     
     func adjustPrices(by percentage: Double) {
-        for index in productList.indices {
+        for index in groceryData.productList.indices {
             if let oldPrice = originalPrices[index] {
-                productList[index].price = oldPrice * (1 - percentage/100)
+                groceryData.productList[index].price = oldPrice * (1 - percentage/100)
             } else {
-                originalPrices[index] = productList[index].price
-                productList[index].price *= (1 - percentage/100)
+                originalPrices[index] = groceryData.productList[index].price
+                groceryData.productList[index].price *= (1 - percentage/100)
             }
         }
     }
     
     func removeAllProducts() {
-        productList.removeAll()
+        groceryData.productList.removeAll()
     }
 }
 

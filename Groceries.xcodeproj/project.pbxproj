@@ -26,6 +26,7 @@
 		753647602B2665E9000EF052 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536475F2B2665E9000EF052 /* CustomButtonView.swift */; };
 		753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753647632B2670AE000EF052 /* StoreViewModel.swift */; };
 		7572A26B2B271B0A0025B829 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A26A2B271B0A0025B829 /* SetupViewModel.swift */; };
+		7572A26D2B2723ED0025B829 /* SharedGroceryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A26C2B2723ED0025B829 /* SharedGroceryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		7536475F2B2665E9000EF052 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		753647632B2670AE000EF052 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		7572A26A2B271B0A0025B829 /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		7572A26C2B2723ED0025B829 /* SharedGroceryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedGroceryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				7501A4542B25B676000C4F7A /* GroceryModel.swift */,
+				7572A26C2B2723ED0025B829 /* SharedGroceryData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				753647642B2670AE000EF052 /* StoreViewModel.swift in Sources */,
 				7504C0292B26FFB900977F8B /* CustomTextView.swift in Sources */,
 				7536475A2B265D59000EF052 /* SaleModalView.swift in Sources */,
+				7572A26D2B2723ED0025B829 /* SharedGroceryData.swift in Sources */,
 				7501A44A2B2516F4000C4F7A /* StoreView.swift in Sources */,
 				7501A44E2B251712000C4F7A /* SetupView.swift in Sources */,
 				7501A4552B25B676000C4F7A /* GroceryModel.swift in Sources */,

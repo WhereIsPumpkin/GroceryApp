@@ -74,5 +74,5 @@ struct CartView: View {
 
 // MARK: - Preview
 #Preview {
-    CartView(viewModel: CartViewModel(productList: GroceryStore().groceryList))
+    SetupView(viewModel: SetupViewModel(groceryData: SharedGroceryData(productList: GroceryStore.shared.groceryList)))
 }

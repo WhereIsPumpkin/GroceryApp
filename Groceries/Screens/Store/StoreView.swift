@@ -31,8 +31,8 @@ struct StoreView: View {
                 // MARK: Product List Section
                 ScrollView() {
                     LazyVGrid(columns: viewModel.columns, spacing: 15) {
-                        ForEach(viewModel.productList) { item in
-                            ProductCardView(groceryItem: item, viewModel: StoreViewModel(productList: viewModel.productList))
+                        ForEach(viewModel.groceryData.productList) { item in
+                            ProductCardView(groceryItem: item, viewModel: viewModel)
                                 .padding(.bottom, 15)
                         }
                     }
@@ -47,6 +47,6 @@ struct StoreView: View {
 
 // MARK: - Preview
 #Preview {
-    StoreView(viewModel: StoreViewModel(productList: GroceryStore().groceryList))
+    StoreView(viewModel: StoreViewModel(groceryData: SharedGroceryData(productList: GroceryStore.shared.groceryList)))
 }
 

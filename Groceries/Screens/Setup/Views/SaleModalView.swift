@@ -42,5 +42,5 @@ struct SaleModalView: View {
 // MARK: - Preview
 
 #Preview {
-    SaleModalView(showModal: .constant(true), percentage: .constant(0), viewModel: SetupViewModel(productList: GroceryStore().groceryList))
+    SaleModalView(showModal: .constant(true), percentage: .constant(0), viewModel: SetupViewModel(groceryData: SharedGroceryData(productList: GroceryStore.shared.groceryList)))
 }

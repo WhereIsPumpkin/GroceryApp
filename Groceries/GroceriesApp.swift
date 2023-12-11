@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct GroceriesApp: App {
-    @State private var groceryStore = GroceryStore()
+    @State private var groceryStore = GroceryStore.shared
     
     var body: some Scene {
         WindowGroup {

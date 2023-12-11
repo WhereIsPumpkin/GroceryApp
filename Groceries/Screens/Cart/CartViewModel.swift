@@ -5,18 +5,18 @@
 //  Created by Saba Gogrichiani on 10.12.23.
 //
 
-import Foundation
+import SwiftUI
 
 class CartViewModel: ObservableObject {
     
-    var productList: [GroceryItem]
+    @ObservedObject var groceryData: SharedGroceryData
     
-    init(productList: [GroceryItem]) {
-        self.productList = productList
+    init(groceryData: SharedGroceryData) {
+        self.groceryData = groceryData
     }
     
     var filteredProductList: [GroceryItem] {
-        productList.filter { $0.quantity > 0 }
+        groceryData.productList.filter { $0.quantity > 0 }
     }
     
     var totalPrice: Double {
